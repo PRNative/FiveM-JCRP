@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCRP - Character Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <!-- Background overlay -->
+        <div class="overlay"></div>
+
+        <!-- Main container -->
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="logo">JCRP</h1>
+                <p class="subtitle">Select Your Character</p>
+            </div>
+
+            <!-- Character slots -->
+            <div id="character-slots" class="character-grid">
+                <!-- Slot 1 -->
+                <div class="character-card" data-slot="1" id="slot-1">
+                    <div class="card-header">
+                        <span class="slot-number">SLOT 1</span>
+                    </div>
+                    <div class="card-body empty-slot">
+                        <div class="empty-icon">+</div>
+                        <p>Create Character</p>
+                    </div>
+                </div>
+                <!-- Slot 2 -->
+                <div class="character-card" data-slot="2" id="slot-2">
+                    <div class="card-header">
+                        <span class="slot-number">SLOT 2</span>
+                    </div>
+                    <div class="card-body empty-slot">
+                        <div class="empty-icon">+</div>
+                        <p>Create Character</p>
+                    </div>
+                </div>
+                <!-- Slot 3 -->
+                <div class="character-card" data-slot="3" id="slot-3">
+                    <div class="card-header">
+                        <span class="slot-number">SLOT 3</span>
+                    </div>
+                    <div class="card-body empty-slot">
+                        <div class="empty-icon">+</div>
+                        <p>Create Character</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error/success message -->
+            <div id="message-bar" class="message-bar hidden"></div>
+        </div>
+
+        <!-- Character Creation Modal -->
+        <div id="create-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Create Character</h2>
+                    <button class="close-btn" onclick="closeCreateModal()">&times;</button>
+                </div>
+                <form id="create-form" onsubmit="return false;">
+                    <input type="hidden" id="create-slot" value="">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" required maxlength="32" placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" required maxlength="32" placeholder="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" value="1990-01-01">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="backstory">Backstory (optional)</label>
+                        <textarea id="backstory" rows="3" maxlength="500" placeholder="Tell your story..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeCreateModal()">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="submitCreate()">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="delete-modal" class="modal hidden">
+            <div class="modal-content modal-small">
+                <div class="modal-header">
+                    <h2>Delete Character</h2>
+                </div>
+                <p id="delete-confirm-text">Are you sure you want to delete this character? This cannot be undone.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete Forever</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
