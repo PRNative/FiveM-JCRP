@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCRP Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="overlay" onclick="closeBank()"></div>
+        <div class="bank-container">
+            <div class="bank-header">
+                <h1>Maze Bank</h1>
+                <button class="close-btn" onclick="closeBank()">&times;</button>
+            </div>
+
+            <!-- Balances -->
+            <div class="balances">
+                <div class="balance-card cash-card">
+                    <span class="balance-label">Cash</span>
+                    <span class="balance-amount" id="cash-balance">$0</span>
+                </div>
+                <div class="balance-card bank-card">
+                    <span class="balance-label">Bank</span>
+                    <span class="balance-amount" id="bank-balance">$0</span>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <div class="action-group">
+                    <h3>Deposit / Withdraw</h3>
+                    <div class="action-row">
+                        <input type="number" id="dw-amount" placeholder="Amount" min="1">
+                        <button class="btn btn-success" onclick="deposit()">Deposit</button>
+                        <button class="btn btn-warning" onclick="withdraw()">Withdraw</button>
+                    </div>
+                </div>
+                <div class="action-group">
+                    <h3>Transfer</h3>
+                    <div class="action-row">
+                        <input type="text" id="transfer-target" placeholder="Citizen ID">
+                        <input type="number" id="transfer-amount" placeholder="Amount" min="1">
+                        <button class="btn btn-primary" onclick="transfer()">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ledger -->
+            <div class="ledger">
+                <h3>Recent Transactions</h3>
+                <div class="ledger-list" id="ledger-list">
+                    <p class="empty-ledger">No transactions yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
