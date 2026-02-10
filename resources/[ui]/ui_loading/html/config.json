@@ -1,0 +1,18 @@
+{
+    "serverName": "JCRP",
+    "serverTagline": "Premium Roleplay Experience",
+    "backgroundUrl": "",
+    "logoUrl": "",
+    "musicUrl": "",
+    "showTips": true,
+    "tips": [
+        "Welcome to JCRP! Read the rules at our Discord.",
+        "Press F1 to open your phone.",
+        "Remember to stay in character at all times.",
+        "Visit the hospital if you need medical attention.",
+        "Your inventory persists across sessions.",
+        "Type /report to contact an admin.",
+        "Bank your cash at any ATM or bank location."
+    ],
+    "tipInterval": 6000
+}

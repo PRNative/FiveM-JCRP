@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCRP - Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <!-- Background -->
+        <div class="background" id="background"></div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Top: Logo area -->
+            <div class="top-section">
+                <div id="logo-area">
+                    <h1 class="server-name" id="server-name">JCRP</h1>
+                    <p class="tagline" id="tagline">Premium Roleplay Experience</p>
+                </div>
+            </div>
+
+            <!-- Bottom: Loading info -->
+            <div class="bottom-section">
+                <!-- Tips -->
+                <div class="tip-container" id="tip-container">
+                    <p class="tip-text" id="tip-text">Loading...</p>
+                </div>
+
+                <!-- Progress bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span class="progress-text" id="progress-text">Connecting...</span>
+                        <span class="progress-percent" id="progress-percent">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
