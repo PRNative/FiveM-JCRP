@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <h1>Select Your Character</h1>
+                <p>Choose a character or create a new one</p>
+            </div>
+            
+            <div class="character-grid" id="characterGrid">
+                <!-- Characters will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <!-- Create Character Modal -->
+        <div id="createModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>Create New Character</h2>
+                <form id="createForm">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstname" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastname" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" required max="2008-01-01">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeCreateModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

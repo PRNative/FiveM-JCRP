@@ -1,0 +1,75 @@
+{
+  "server": {
+    "name": "JCRP",
+    "brand": "Just City Roleplay",
+    "logo_url": "https://via.placeholder.com/512x512.png?text=JCRP",
+    "discord_url": "",
+    "website_url": ""
+  },
+  "characters": {
+    "max_slots": 3,
+    "default_money": {
+      "cash": 5000,
+      "bank": 25000,
+      "dirty": 0
+    },
+    "starting_job": {
+      "name": "unemployed",
+      "grade": 0
+    }
+  },
+  "spawn": {
+    "new_character_spawn": {
+      "x": -1035.71,
+      "y": -2731.87,
+      "z": 13.76,
+      "heading": 150.0,
+      "label": "Airport"
+    },
+    "predefined_spawns": [
+      {
+        "id": "legion",
+        "label": "Legion Square",
+        "x": 195.17,
+        "y": -933.77,
+        "z": 29.69,
+        "heading": 144.5
+      },
+      {
+        "id": "hospital",
+        "label": "Pillbox Hospital",
+        "x": 307.7,
+        "y": -595.4,
+        "z": 43.29,
+        "heading": 48.5
+      },
+      {
+        "id": "beach",
+        "label": "Vespucci Beach",
+        "x": -1387.88,
+        "y": -588.77,
+        "z": 30.32,
+        "heading": 214.5
+      }
+    ]
+  },
+  "inventory": {
+    "max_slots": 40,
+    "max_weight": 120000
+  },
+  "status": {
+    "decay_rate": {
+      "hunger": 0.1,
+      "thirst": 0.15,
+      "stress": 0.05
+    },
+    "decay_interval": 60000
+  },
+  "apartments": {
+    "starter_apartment_price": 0,
+    "auto_assign_on_first_character": true
+  },
+  "database": {
+    "schema_version": 1
+  }
+}
