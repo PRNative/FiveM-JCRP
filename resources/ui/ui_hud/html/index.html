@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud" style="display: none;">
+        <!-- Top Left - Money -->
+        <div class="hud-section top-left">
+            <div class="money-display">
+                <div class="money-item cash">
+                    <span class="icon">💵</span>
+                    <span class="label">Cash</span>
+                    <span class="value" id="cash">$0</span>
+                </div>
+                <div class="money-item bank">
+                    <span class="icon">🏦</span>
+                    <span class="label">Bank</span>
+                    <span class="value" id="bank">$0</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Top Right - Job -->
+        <div class="hud-section top-right">
+            <div class="job-display">
+                <div class="job-title" id="jobTitle">Unemployed</div>
+                <div class="job-grade" id="jobGrade"></div>
+                <div class="job-duty" id="jobDuty" style="display: none;">
+                    <span class="duty-badge">ON DUTY</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Left - Status -->
+        <div class="hud-section bottom-left">
+            <div class="status-display">
+                <div class="status-item">
+                    <span class="icon">🍔</span>
+                    <div class="status-bar">
+                        <div class="status-fill hunger" id="hungerBar"></div>
+                    </div>
+                    <span class="value" id="hunger">100%</span>
+                </div>
+                <div class="status-item">
+                    <span class="icon">💧</span>
+                    <div class="status-bar">
+                        <div class="status-fill thirst" id="thirstBar"></div>
+                    </div>
+                    <span class="value" id="thirst">100%</span>
+                </div>
+                <div class="status-item">
+                    <span class="icon">😰</span>
+                    <div class="status-bar">
+                        <div class="status-fill stress" id="stressBar"></div>
+                    </div>
+                    <span class="value" id="stress">0%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Center - Vitals -->
+        <div class="hud-section bottom-center">
+            <div class="vitals-display">
+                <div class="vital health">
+                    <span class="icon">❤️</span>
+                    <div class="vital-bar">
+                        <div class="vital-fill" id="healthBar"></div>
+                    </div>
+                </div>
+                <div class="vital armor">
+                    <span class="icon">🛡️</span>
+                    <div class="vital-bar">
+                        <div class="vital-fill" id="armorBar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Right - Location -->
+        <div class="hud-section bottom-right">
+            <div class="location-display">
+                <div class="street" id="street">Unknown</div>
+                <div class="area" id="area">San Andreas</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
