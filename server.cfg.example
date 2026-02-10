@@ -1,0 +1,41 @@
+## Example FXServer config (copy to server.cfg)
+## This repo only contains resources; you still need an FXServer artifacts install.
+
+sv_hostname "JCRP (dev)"
+sv_maxclients 48
+sets tags "roleplay,db-first"
+
+## Network
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+## Keymaster / license key
+sv_licenseKey "REPLACE_ME"
+
+## OneSync (recommended)
+set onesync on
+
+## oxmysql (required) - set this for your MariaDB/MySQL
+set mysql_connection_string "mysql://user:pass@127.0.0.1:3306/fivem?charset=utf8mb4"
+
+## Optional oxmysql tuning
+set mysql_slow_query_warning 200
+
+## Environment config selection for core_boot
+setr core_env "development"
+
+## Ensure dependencies first
+ensure oxmysql
+ensure ox_lib
+
+## Core (P0)
+ensure core_boot
+ensure core_identity
+ensure core_characters
+ensure core_state
+ensure core_session
+ensure core_spawn
+
+## UI (P0)
+ensure ui_loading
+
