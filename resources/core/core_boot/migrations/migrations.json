@@ -1,0 +1,10 @@
+{
+  "migrations": [
+    {
+      "version": "core_boot:20260210_001",
+      "file": "001_schema_migrations.sql",
+      "name": "Create schema_migrations"
+    }
+  ]
+}
+

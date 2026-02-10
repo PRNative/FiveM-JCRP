@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "name": "JCRP",
+    "themeColor": "#7c3aed"
+  },
+  "migrations": {
+    "order": [
+      "core_boot",
+      "core_identity",
+      "core_characters",
+      "core_state",
+      "core_session",
+      "core_spawn"
+    ]
+  },
+  "spawn": {
+    "newCharacterDefault": { "x": -1037.6, "y": -2737.9, "z": 20.2, "w": 0.0 },
+    "predefined": [
+      { "id": "legion", "label": "Legion Square", "coords": { "x": 215.76, "y": -810.12, "z": 30.73, "w": 157.0 } },
+      { "id": "vespucci", "label": "Vespucci Beach", "coords": { "x": -1222.9, "y": -1507.7, "z": 4.3, "w": 31.0 } },
+      { "id": "sandy", "label": "Sandy Shores", "coords": { "x": 1854.2, "y": 3683.4, "z": 34.2, "w": 210.0 } }
+    ]
+  }
+}
+
