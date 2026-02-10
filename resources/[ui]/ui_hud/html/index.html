@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCRP HUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HUD Container -->
+    <div id="hud" class="hidden">
+
+        <!-- Bottom-left: Status bars -->
+        <div class="hud-bottom-left">
+            <!-- Health -->
+            <div class="status-bar" id="health-bar">
+                <div class="bar-icon">&#9829;</div>
+                <div class="bar-track"><div class="bar-fill health-fill" id="health-fill"></div></div>
+            </div>
+            <!-- Armor -->
+            <div class="status-bar" id="armor-bar">
+                <div class="bar-icon">&#9898;</div>
+                <div class="bar-track"><div class="bar-fill armor-fill" id="armor-fill"></div></div>
+            </div>
+            <!-- Hunger -->
+            <div class="status-bar" id="hunger-bar">
+                <div class="bar-icon">&#127829;</div>
+                <div class="bar-track"><div class="bar-fill hunger-fill" id="hunger-fill"></div></div>
+            </div>
+            <!-- Thirst -->
+            <div class="status-bar" id="thirst-bar">
+                <div class="bar-icon">&#128167;</div>
+                <div class="bar-track"><div class="bar-fill thirst-fill" id="thirst-fill"></div></div>
+            </div>
+        </div>
+
+        <!-- Top-right: Money -->
+        <div class="hud-top-right">
+            <div class="money-display">
+                <div class="money-row cash">
+                    <span class="money-label">Cash</span>
+                    <span class="money-value" id="cash-value">$0</span>
+                </div>
+                <div class="money-row bank">
+                    <span class="money-label">Bank</span>
+                    <span class="money-value" id="bank-value">$0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom-right: Location & Job -->
+        <div class="hud-bottom-right">
+            <div class="location-display">
+                <div class="street-name" id="street-name">Loading...</div>
+                <div class="area-name" id="area-name"></div>
+            </div>
+            <div class="job-display">
+                <span class="job-label" id="job-label">Unemployed</span>
+                <span class="duty-badge hidden" id="duty-badge">ON DUTY</span>
+            </div>
+            <div class="speed-display hidden" id="speed-display">
+                <span class="speed-value" id="speed-value">0</span>
+                <span class="speed-unit">km/h</span>
+            </div>
+        </div>
+
+        <!-- Notification area -->
+        <div id="notification-container" class="notification-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

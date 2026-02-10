@@ -1,0 +1,8 @@
+-- system_status migration 0001: character status table
+CREATE TABLE IF NOT EXISTS character_status (
+    citizenid VARCHAR(20) NOT NULL PRIMARY KEY,
+    hunger FLOAT NOT NULL DEFAULT 100.0,
+    thirst FLOAT NOT NULL DEFAULT 100.0,
+    stress FLOAT NOT NULL DEFAULT 0.0,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

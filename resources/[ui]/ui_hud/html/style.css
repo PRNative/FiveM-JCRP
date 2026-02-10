@@ -1,0 +1,252 @@
+/* ============================================================
+   JCRP HUD Stylesheet
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: transparent;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#hud {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ---- Bottom-left: Status bars ---- */
+.hud-bottom-left {
+    position: fixed;
+    bottom: 30px;
+    left: 220px;
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+}
+
+.status-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.bar-icon {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bar-track {
+    width: 6px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 3px;
+    transition: height 0.5s ease;
+}
+
+.health-fill {
+    background: linear-gradient(to top, #22c55e, #4ade80);
+    height: 100%;
+}
+
+.armor-fill {
+    background: linear-gradient(to top, #3b82f6, #60a5fa);
+    height: 0%;
+}
+
+.hunger-fill {
+    background: linear-gradient(to top, #f97316, #fb923c);
+    height: 100%;
+}
+
+.thirst-fill {
+    background: linear-gradient(to top, #06b6d4, #22d3ee);
+    height: 100%;
+}
+
+/* ---- Top-right: Money ---- */
+.hud-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.money-display {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+
+.money-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.money-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.money-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'Consolas', monospace;
+}
+
+.cash .money-value {
+    color: #22c55e;
+}
+
+.bank .money-value {
+    color: #3b82f6;
+}
+
+/* ---- Bottom-right: Location + Job ---- */
+.hud-bottom-right {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    text-align: right;
+}
+
+.location-display {
+    margin-bottom: 4px;
+}
+
+.street-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.area-name {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.job-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.job-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.duty-badge {
+    font-size: 0.55rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 2px;
+    background: #22c55e;
+    color: #000;
+    letter-spacing: 0.05rem;
+}
+
+.speed-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 3px;
+}
+
+.speed-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    font-family: 'Consolas', monospace;
+}
+
+.speed-unit {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---- Notifications ---- */
+.notification-container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 320px;
+    z-index: 1000;
+}
+
+.notification {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    animation: notifIn 0.3s ease, notifOut 0.3s ease 3.7s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+}
+
+.notification.info {
+    background: rgba(59, 130, 246, 0.85);
+}
+
+.notification.success {
+    background: rgba(34, 197, 94, 0.85);
+}
+
+.notification.error {
+    background: rgba(239, 68, 68, 0.85);
+}
+
+.notification.warning {
+    background: rgba(234, 179, 8, 0.85);
+    color: #000;
+}
+
+@keyframes notifIn {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes notifOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
