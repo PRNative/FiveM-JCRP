@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Select</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="hidden">
+    <div id="character-select" class="panel hidden">
+      <h1>Select Character</h1>
+      <div id="character-slots"></div>
+      <div id="create-area">
+        <button id="btn-create" class="btn-primary">Create New Character</button>
+      </div>
+    </div>
+
+    <div id="create-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Create Character</h2>
+        <form id="create-form">
+          <input type="hidden" id="create-slot" value="1">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="firstname" required maxlength="64">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lastname" required maxlength="64">
+          </div>
+          <div class="form-group">
+            <label>Date of Birth (YYYY-MM-DD)</label>
+            <input type="text" id="dob" placeholder="1990-01-15" maxlength="10">
+          </div>
+          <div class="form-row">
+            <button type="button" class="btn-secondary" id="btn-cancel-create">Cancel</button>
+            <button type="submit" class="btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="spawn-select" class="panel hidden">
+      <h1>Choose Spawn Location</h1>
+      <div id="spawn-options"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

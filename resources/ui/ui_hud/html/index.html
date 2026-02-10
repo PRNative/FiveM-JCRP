@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hud" class="hidden">
+    <div class="hud-left">
+      <div class="stat money">
+        <span class="icon">$</span>
+        <span id="cash">0</span>
+      </div>
+      <div class="stat bank">
+        <span class="icon">🏦</span>
+        <span id="bank">0</span>
+      </div>
+    </div>
+    <div class="hud-center">
+      <div class="stat job" id="jobDisplay">Unemployed</div>
+    </div>
+    <div class="hud-right">
+      <div class="stat hunger" title="Hunger">
+        <span class="icon">🍔</span>
+        <span id="hunger">100</span>
+      </div>
+      <div class="stat thirst" title="Thirst">
+        <span class="icon">💧</span>
+        <span id="thirst">100</span>
+      </div>
+      <div class="stat stress" title="Stress">
+        <span class="icon">😤</span>
+        <span id="stress">0</span>
+      </div>
+      <div class="stat street" id="streetDisplay">Unknown</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

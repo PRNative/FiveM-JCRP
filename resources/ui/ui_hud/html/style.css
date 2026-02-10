@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#hud {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.hud-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hud-center {
+  display: flex;
+  align-items: center;
+}
+
+.hud-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  border: 1px solid rgba(71, 85, 105, 0.4);
+}
+
+.stat .icon {
+  font-size: 0.85rem;
+}
+
+#cash, #bank {
+  font-weight: 600;
+  color: #22c55e;
+}
+
+#jobDisplay {
+  color: #94a3b8;
+}
+
+#streetDisplay {
+  color: #64748b;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,40 @@
+{
+  "database": {
+    "connection_string": "mysql://user:password@localhost:3306/fivem_platform",
+    "timeout": 10000
+  },
+  "server": {
+    "name": "FiveM Platform Foundation",
+    "maxCharactersPerAccount": 3,
+    "defaultSpawn": {
+      "x": -1037.0,
+      "y": -2737.0,
+      "z": 20.17,
+      "heading": 0.0
+    },
+    "spawnLocations": [
+      {
+        "id": "legion",
+        "label": "Legion Square",
+        "coords": { "x": 195.17, "y": -933.77, "z": 30.69, "heading": 144.5 }
+      },
+      {
+        "id": "pillbox",
+        "label": "Pillbox Hospital",
+        "coords": { "x": 298.6, "y": -584.5, "z": 43.26, "heading": 70.0 }
+      },
+      {
+        "id": "airport",
+        "label": "LSIA",
+        "coords": { "x": -1037.0, "y": -2737.0, "z": 20.17, "heading": 0.0 }
+      }
+    ]
+  },
+  "loading": {
+    "brandName": "FiveM Platform",
+    "brandTagline": "DB-First Roleplay",
+    "backgroundColor": "#0a0a0f",
+    "accentColor": "#3b82f6"
+  },
+  "debug": false
+}
